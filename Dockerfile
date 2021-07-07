@@ -36,7 +36,7 @@ USER root
 RUN usermod -aG sudo $USER
 
 RUN rm /etc/apt/sources.list.d/mongodb.list
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && apt-get install nodejs -y
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && apt-get install nodejs -y --force-yes
 
 USER $USER
 
